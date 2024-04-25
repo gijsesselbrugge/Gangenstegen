@@ -1,4 +1,5 @@
 *,
+
 *::after,
 *::before {
   margin: 0;
@@ -95,4 +96,37 @@ main {
   pointer-events: none;
   /* z-index: 100; */
   box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
+}
+.subtitle {
+  position: absolute; /* Stel positie in als absoluut */
+  bottom: 50px; /* Afstand vanaf de onderkant van het venster */
+  left: 1200px; /* Afstand vanaf de linkerkant van het venster */
+  font-family: 'Josefin Sans', sans-serif; /* Lettertype */
+  font-size: 14px; /* Grootte van de tekst */
+  font-weight: bold; /* Vetgedrukte stijl */
+  color: #000000; /* Tekstkleur */
+  padding: 5px 10px; /* Voeg wat ruimte toe rondom de tekst */
+  background-color: rgba(255, 255, 255, 0.5); /* Doorzichtig wit achtergrondkleur */
+  border-radius: 5px; /* Afgeronde hoeken */
+}
+.subtitle::after {
+  content: attr(data-subtitle); /* Voeg subtitel toe */
+  display: block;
+  font-size: 12px; /* Grootte van de subtitel */
+  font-weight: normal; /* Normale stijl voor subtitel */
+}
+.container {
+  margin-top: 20px; /* Adjust the top margin of the container */
+}
+
+.container + .container {
+  margin-top: 40px; /* Adjust the margin between containers */
+}
+h1 {
+  font-size: 28px; /* Grootte van de tekst */
+  font-weight: bold; /* Vetgedrukte stijl */
+  color: #333; /* Tekstkleur */
+  text-align: center; /* Uitlijning van de tekst */
+  margin-bottom: 10px; /* Ruimte onder de hoofdtitel */
+  font-family: 'Josefin Sans', sans-serif; /* Lettertype */
 }
